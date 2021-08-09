@@ -1,0 +1,137 @@
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin: auto;
+  background-color: var(--color3);
+  color: var(--color4);
+  width: 100%;
+}
+.card-game {
+  border-radius: 10px;
+  padding: 2rem;
+  border: solid thin #000;
+  transition: 0.3s;
+  position: relative;
+}
+.card-game:hover,
+.card-game:focus {
+  border: solid thin var(--color1);
+  outline: none;
+}
+
+.card-game img {
+  width: 100%;
+}
+.card-game h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.card-game p {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.card-game .rating {
+  display: flex;
+  justify-content: space-between;
+}
+.card-game .rating img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-price {
+  background-color: var(--color1);
+  width: 90%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: none;
+  margin: auto;
+  background: linear-gradient(
+    114deg,
+    var(--color5) 0%,
+    var(--color1) 49%,
+    var(--color6) 100%
+  );
+  color: var(--color4);
+  transition: all 0.3s;
+  border: solid thin var(--color6);
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+}
+.btn-price:hover,
+.btn-price:focus {
+  outline: none;
+  border: solid thin var(--color4);
+}
+.btn-price .sale-price {
+  font-size: 15px;
+  /* text-decoration: line-through; */
+  font-weight: 700;
+  position: relative;
+}
+.btn-price .sale-price::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  width: 115%;
+  height: 2px;
+  background-color: var(--color4);
+}
+.btn-price .normal-price {
+  font-size: 20px;
+  font-weight: 600;
+}
+.savings {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 65px;
+  height: 65px;
+  background-color: rgb(236, 28, 35);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.is-to-buy {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: solid 2px var(--color1);
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color3);
+}
+
+.remove-item {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+  .btn-price {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+}
